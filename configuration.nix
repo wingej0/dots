@@ -215,6 +215,15 @@
     # xdg-desktop-portal-gtk
   ];
 
+  fonts.packages = with pkgs; [
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-color-emoji
+    dejavu_fonts
+    fira-code-nerdfont
+    font-awesome
+  ];
+
   # Source bash so scripts will work
   system.activationScripts.binbash = {
     deps = [ "binsh" ];
@@ -228,12 +237,12 @@
   users.defaultUserShell = pkgs.zsh;
 
   # Enable mongodb
-  services.mongodb = {
-    enable = true;
-    enableAuth = true;
-    initialRootPassword = "mongodbroot";
-    bind_ip = "0.0.0.0";
-  };
+  # services.mongodb = {
+  #   enable = true;
+  #   enableAuth = true;
+  #   initialRootPassword = "mongodbroot";
+  #   bind_ip = "0.0.0.0";
+  # };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
