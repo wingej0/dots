@@ -225,16 +225,17 @@
   ];
 
   # Source bash so scripts will work
-  system.activationScripts.binbash = {
-    deps = [ "binsh" ];
-    text = ''
-         ln -s /bin/sh /bin/bash
-    '';
-  };
+  # system.activationScripts.binbash = {
+  #   deps = [ "binsh" ];
+  #   text = ''
+  #        ln -s /bin/sh /bin/bash
+  #   '';
+  # };
 
   # Change shell to zsh
-  programs.zsh.enable = true;
+  environment.shells = with pkgs; [zsh bash];
   users.defaultUserShell = pkgs.zsh;
+  programs.zsh.enable = true;
 
   # Enable mongodb
   # services.mongodb = {

@@ -20,7 +20,6 @@
   home.packages = [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
-    pkgs.hello
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -43,6 +42,7 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
+    ".config/alacritty".source = ./configs/alacritty;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -69,6 +69,26 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
+  };
+
+  # zsh settings (powerlevel10k, wallust, fastfetch)
+  programs.zsh = {
+    enable = true;
+    plugins = [
+      {
+        name = "powerlevel10k";
+        src = pkgs.zsh-powerlevel10k;
+        file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+      }
+    ];
+    initExtra = ''
+      source ~/.p10k.zsh
+      cat ~/.cache/wallust/sequences
+      fastfetch
+    '';
+    shellAliases = {
+      ll = "ls -l";
+    };
   };
 
   # Let Home Manager install and manage itself.
