@@ -60,12 +60,12 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
-  # services.xserver.windowManager.qtile = {
-  #   enable = true;
-  #   extraPackages = python3Packages: with python3Packages; [
-  #     qtile-extras
-  #   ];
-  # };
+  services.xserver.windowManager.qtile = {
+    enable = true;
+    extraPackages = python3Packages: with python3Packages; [
+      qtile-extras
+    ];
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -136,6 +136,7 @@
     gnome.gnome-calculator
     veracrypt
     bibata-cursors
+    wgnord
 
     # Browsers
     vivaldi
@@ -201,18 +202,19 @@
     gnomeExtensions.tiling-assistant
 
     # Qtile programs
-    # rofi-wayland
-    # grim
-    # slurp
-    # swappy
-    # cliphist
-    # swayidle
-    # swaylock-effects
-    # polkit_gnome
-    # wlogout
-    # xdg-desktop-portal
-    # xdg-desktop-portal-wlr
-    # xdg-desktop-portal-gtk
+    rofi-wayland
+    grim
+    slurp
+    swappy
+    cliphist
+    swayidle
+    swaylock-effects
+    polkit_gnome
+    wlogout
+    wlr-randr
+    xdg-desktop-portal
+    xdg-desktop-portal-wlr
+    xdg-desktop-portal-gtk
   ];
 
   fonts.packages = with pkgs; [
