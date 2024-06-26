@@ -3,6 +3,8 @@
 {
   imports = [
     ./home/zsh.nix
+    # ./home/gnome.nix
+    ./home/qtile.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -66,9 +68,11 @@
   # or
   #
   #  /etc/profiles/per-user/wingej0/etc/profile.d/hm-session-vars.sh
-  #
+  
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "vim";
+    # Reminds electron apps to run with XWayland
+    NIXOS_OZONE_WL = "1";
   };
 
   # Let Home Manager install and manage itself.

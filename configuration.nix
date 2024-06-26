@@ -57,11 +57,13 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  programs.xwayland.enable = true;
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
+  # Enable Qtile
   services.xserver.windowManager.qtile = {
     enable = true;
     extraPackages = python3Packages: with python3Packages; [
@@ -130,12 +132,11 @@
     vim
     htop
     acpi
+    killall
     pika-backup
     fastfetch
     wallust
     variety
-    gnome.gnome-boxes
-    gnome.gnome-calculator
     veracrypt
     bibata-cursors
     wgnord
@@ -192,33 +193,6 @@
     scid-vs-pc
     stockfish
     lc0
-
-    # Gnome extensions
-    gnome.gnome-tweaks
-    gnomeExtensions.dash-to-dock
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.appindicator
-    gnomeExtensions.caffeine
-    gnomeExtensions.clipboard-indicator
-    gnomeExtensions.alphabetical-app-grid
-    gnomeExtensions.tiling-assistant
-
-    # Qtile programs
-    xwayland
-    rofi-wayland
-    grim
-    slurp
-    swappy
-    cliphist
-    swayidle
-    swaylock-effects
-    polkit_gnome
-    wlogout
-    wlr-randr
-    xdg-desktop-portal
-    xdg-desktop-portal-wlr
-    xdg-desktop-portal-gtk
-    dunst
   ];
 
   # Change shell to zsh
