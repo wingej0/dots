@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./system/input-remapper.nix
     ];
 
   # Bootloader.
@@ -202,6 +203,7 @@
     gnomeExtensions.tiling-assistant
 
     # Qtile programs
+    xwayland
     rofi-wayland
     grim
     slurp
@@ -215,6 +217,7 @@
     xdg-desktop-portal
     xdg-desktop-portal-wlr
     xdg-desktop-portal-gtk
+    dunst
   ];
 
   fonts.packages = with pkgs; [
