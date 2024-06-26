@@ -11,9 +11,9 @@
         }
         ];
         initExtra = ''
-        source ~/.p10k.zsh
-        cat ~/.cache/wallust/sequences
-        fastfetch
+            source ~/.p10k.zsh
+            cat ~/.cache/wallust/sequences
+            fastfetch
         '';
         shellAliases = {
         ll = "ls -l";

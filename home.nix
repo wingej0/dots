@@ -41,6 +41,7 @@
   home.file = {
     # Source dotfiles to .config
     ".config/alacritty".source = ./configs/alacritty;
+    ".config/fastfetch".source = ./configs/fastfetch;
     ".config/wallust".source = ./configs/wallust;
 
     # # You can also set the file content immediately.
