@@ -2,8 +2,8 @@
 {
     home.packages = with pkgs; [
         # Themes
-        qogir-theme
-        qogir-icon-theme
+        orchis-theme
+        tela-icon-theme
 
         # Gnome extensions
         gnome.gnome-tweaks
@@ -14,6 +14,7 @@
         gnomeExtensions.clipboard-indicator
         gnomeExtensions.alphabetical-app-grid
         gnomeExtensions.tiling-assistant
+        gnomeExtensions.user-themes
 
         gnome.gnome-boxes
         gnome.gnome-calculator
@@ -21,6 +22,6 @@
 
     home.sessionVariables = {
         EDITOR = "vim";
-        GTK_THEME = "Qogir";
+        GTK_THEME = "Orchis-Green";
     };
 }

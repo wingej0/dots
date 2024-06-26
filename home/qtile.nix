@@ -1,9 +1,6 @@
 { config, pkgs, ... }:
 {
     home.packages = with pkgs; [
-        # Themes
-        qogir-theme
-        qogir-icon-theme
 
         # Qtile programs
         xwayland
@@ -26,7 +23,7 @@
 
     home.sessionVariables = {
         EDITOR = "vim";
-        GTK_THEME = "Qogir";
+        GTK_THEME = "Orchis-Green";
         # Reminds electron apps to run with XWayland
         NIXOS_OZONE_WL = "1";
     };

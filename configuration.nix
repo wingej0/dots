@@ -63,13 +63,17 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
+  # Enable Plasma
+  # services.displayManager.sddm.wayland.enable = true;
+  # services.desktopManager.plasma6.enable = true;
+
   # Enable Qtile
-  services.xserver.windowManager.qtile = {
-    enable = true;
-    extraPackages = python3Packages: with python3Packages; [
-      qtile-extras
-    ];
-  };
+  # services.xserver.windowManager.qtile = {
+  #   enable = true;
+  #   extraPackages = python3Packages: with python3Packages; [
+  #     qtile-extras
+  #   ];
+  # };
 
   # Configure keymap in X11
   services.xserver.xkb = {

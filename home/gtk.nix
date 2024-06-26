@@ -4,18 +4,18 @@
         enable = true;
 
         iconTheme = {
-        name = "Qogir";
-        package = pkgs.qogir-icon-theme;
+            name = "Tela-green-dark";
+            package = pkgs.tela-icon-theme;
         };
 
         theme = {
-        name = "Qogir";
-        package = pkgs.qogir-theme;
+            name = "Orchis-Green";
+            package = pkgs.orchis-theme;
         };
 
         cursorTheme = {
-        name = "Bibata-Modern-Classic";
-        package = pkgs.bibata-cursors;
+            name = "Bibata-Modern-Classic";
+            package = pkgs.bibata-cursors;
         };
     };
 }

@@ -3,9 +3,11 @@
 {
   imports = [
     ./home/zsh.nix
-    # ./home/gnome.nix
+    ./home/gtk.nix
+    ./home/gnome.nix
     ./home/qtile.nix
   ];
+  
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "wingej0";
@@ -45,12 +47,6 @@
     ".config/alacritty".source = ./configs/alacritty;
     ".config/fastfetch".source = ./configs/fastfetch;
     ".config/wallust".source = ./configs/wallust;
-
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
   };
 
   # Home Manager can also manage your environment variables through
