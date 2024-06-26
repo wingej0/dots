@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./home/zsh.nix
+  ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "wingej0";
@@ -65,26 +68,6 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
-  };
-
-  # zsh settings (powerlevel10k, wallust, fastfetch)
-  programs.zsh = {
-    enable = true;
-    plugins = [
-      {
-        name = "powerlevel10k";
-        src = pkgs.zsh-powerlevel10k;
-        file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-      }
-    ];
-    initExtra = ''
-      source ~/.p10k.zsh
-      cat ~/.cache/wallust/sequences
-      fastfetch
-    '';
-    shellAliases = {
-      ll = "ls -l";
-    };
   };
 
   # Let Home Manager install and manage itself.

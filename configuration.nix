@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./system/fonts.nix
       ./system/input-remapper.nix
     ];
 
@@ -219,23 +220,6 @@
     xdg-desktop-portal-gtk
     dunst
   ];
-
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-color-emoji
-    dejavu_fonts
-    fira-code-nerdfont
-    font-awesome
-  ];
-
-  # Source bash so scripts will work
-  # system.activationScripts.binbash = {
-  #   deps = [ "binsh" ];
-  #   text = ''
-  #        ln -s /bin/sh /bin/bash
-  #   '';
-  # };
 
   # Change shell to zsh
   environment.shells = with pkgs; [zsh bash];
