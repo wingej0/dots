@@ -63,17 +63,13 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
-  # Enable Plasma
-  # services.displayManager.sddm.wayland.enable = true;
-  # services.desktopManager.plasma6.enable = true;
-
   # Enable Qtile
-  # services.xserver.windowManager.qtile = {
-  #   enable = true;
-  #   extraPackages = python3Packages: with python3Packages; [
-  #     qtile-extras
-  #   ];
-  # };
+  services.xserver.windowManager.qtile = {
+    enable = true;
+    extraPackages = python3Packages: with python3Packages; [
+      qtile-extras
+    ];
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -115,9 +111,7 @@
 
   # System76
   hardware.system76.enableAll = true;
-  hardware.system76.firmware-daemon.enable = true;
-  hardware.system76.power-daemon.enable = true;
-
+  
   # Install firefox.
   programs.firefox.enable = true;
 
@@ -127,6 +121,10 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    # System76 Packages
+    linuxKernel.packages.linux_6_9.system76-power
+    system76-firmware
+
     # System Packages
     zsh
     alacritty
