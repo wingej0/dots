@@ -4,7 +4,7 @@
   imports = [
     ./home/zsh.nix
     ./home/gtk.nix
-    # ./home/gnome.nix
+    ./home/gnome.nix
     ./home/qtile.nix
   ];
   

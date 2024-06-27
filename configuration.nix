@@ -73,6 +73,7 @@
 
   # Enable pam for swaylock, so it will actually unlock
   security.pam.services.swaylock = {};
+  services.gnome.gnome-keyring.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
