@@ -147,6 +147,7 @@
     veracrypt
     bibata-cursors
     wgnord
+    remmina
 
     # Browsers
     vivaldi
@@ -158,8 +159,8 @@
     jetbrains.pycharm-community
     mongodb-compass
     insomnia
-    # mongodb
-    # mongosh
+    mongodb
+    mongosh
 
     # Media
     obs-studio
@@ -168,6 +169,8 @@
     audacity
     gimp
     cider
+    imagemagick
+    libheif # For converting .heic images
 
     # Office
     gnome-text-editor
