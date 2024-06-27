@@ -16,7 +16,7 @@
             fastfetch
         '';
         shellAliases = {
-            ll = "ls -l";
+            ll = "ls -la";
             nrs = "sudo nixos-rebuild switch --flake .";
             hms = "home-manager switch --flake .";
             update = "nix flake update";

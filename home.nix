@@ -45,9 +45,10 @@
   home.file = {
     # Source dotfiles to .config
     ".config/alacritty".source = ./configs/alacritty;
-    ".config/fastfetch".source = ./configs/fastfetch;
-    ".config/wallust".source = ./configs/wallust;
     ".config/dunst".source = ./configs/dunst;
+    ".config/fastfetch".source = ./configs/fastfetch;
+    ".config/swaylock".source = ./configs/swaylock;
+    ".config/wallust".source = ./configs/wallust;
   };
 
   # Home Manager can also manage your environment variables through

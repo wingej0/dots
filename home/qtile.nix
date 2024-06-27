@@ -11,7 +11,7 @@
         wl-clipboard
         cliphist
         swayidle
-        swaylock
+        swaylock-effects
         polkit_gnome
         wlogout
         wlr-randr
