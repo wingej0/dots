@@ -4,7 +4,7 @@
   imports = [
     ./home/zsh.nix
     ./home/gtk.nix
-    ./home/gnome.nix
+    # ./home/gnome.nix
     ./home/qtile.nix
   ];
   
@@ -47,6 +47,7 @@
     ".config/alacritty".source = ./configs/alacritty;
     ".config/fastfetch".source = ./configs/fastfetch;
     ".config/wallust".source = ./configs/wallust;
+    ".config/dunst".source = ./configs/dunst;
   };
 
   # Home Manager can also manage your environment variables through

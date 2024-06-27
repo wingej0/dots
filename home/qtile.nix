@@ -19,6 +19,7 @@
         xdg-desktop-portal-gtk
         dunst
         playerctl
+        brightnessctl
     ];
 
     home.sessionVariables = {

@@ -111,6 +111,7 @@
 
   # System76
   hardware.system76.enableAll = true;
+  services.power-profiles-daemon.enable = false;
   
   # Install firefox.
   programs.firefox.enable = true;
@@ -122,7 +123,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # System76 Packages
-    linuxKernel.packages.linux_6_9.system76-power
+    # linuxKernel.packages.linux_6_9.system76-power
     system76-firmware
 
     # System Packages
