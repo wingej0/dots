@@ -8,9 +8,10 @@
         grim
         slurp
         swappy
+        wl-clipboard
         cliphist
         swayidle
-        swaylock-effects
+        swaylock
         polkit_gnome
         wlogout
         wlr-randr
