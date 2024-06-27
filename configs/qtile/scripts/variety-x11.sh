@@ -15,4 +15,4 @@ qtile cmd-obj -o cmd -f restart
 doom sync
 
 # Update betterlockscreen image
-betterlockscreen -u .cache/current_wallpaper.jpg
+betterlockscreen -u ~/.cache/current_wallpaper.jpg
