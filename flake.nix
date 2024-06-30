@@ -7,7 +7,7 @@
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    outputs = { self, nixpkgs, home-manager, ... }: 
+    outputs = { self, nixpkgs, home-manager, nur, ... }: 
         let 
             lib = nixpkgs.lib;
             system = "x86_64-linux";
@@ -16,7 +16,9 @@
         nixosConfigurations = {
             darter-pro = lib.nixosSystem {
                 inherit system;
-                modules = [ ./configuration.nix ];
+                modules = [ 
+                    ./configuration.nix
+                ];
             };
         };
         homeConfigurations = {

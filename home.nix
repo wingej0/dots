@@ -47,6 +47,7 @@
     ".config/alacritty".source = ./configs/alacritty;
     ".config/dunst".source = ./configs/dunst;
     ".config/fastfetch".source = ./configs/fastfetch;
+    ".config/qtile".source = ./configs/qtile;
     ".config/swaylock".source = ./configs/swaylock;
     ".config/wallust".source = ./configs/wallust;
   };

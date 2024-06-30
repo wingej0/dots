@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, nur, ... }:
 
 {
   imports =
@@ -34,6 +34,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.wireguard.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -146,7 +147,6 @@
     variety
     veracrypt
     bibata-cursors
-    wgnord
     remmina
 
     # Browsers
@@ -227,6 +227,7 @@
   # };
 
   # List services that you want to enable:
+  # services.nordvpn.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;

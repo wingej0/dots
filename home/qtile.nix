@@ -21,6 +21,13 @@
         dunst
         playerctl
         brightnessctl
+
+        # X11 Stuff
+        picom
+        haskellPackages.greenclip
+        numlockx
+        flameshot
+        betterlockscreen
     ];
 
     home.sessionVariables = {
