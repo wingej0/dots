@@ -108,7 +108,7 @@
   users.users.wingej0 = {
     isNormalUser = true;
     description = "Jeff Winget";
-    extraGroups = [ "networkmanager" "wheel" "adm" ];
+    extraGroups = [ "networkmanager" "wheel" "adm" "nordvpn" ];
     packages = with pkgs; [
     #  thunderbird
     ];
@@ -205,6 +205,10 @@
     lc0
   ];
 
+  nixpkgs.config.packageOverrides = pkgs: {
+    nordvpn = config.nur.repos.LuisChDev.nordvpn;
+  };
+
   # Change shell to zsh
   environment.shells = with pkgs; [zsh bash];
   users.defaultUserShell = pkgs.zsh;
@@ -227,14 +231,15 @@
   # };
 
   # List services that you want to enable:
-  # services.nordvpn.enable = true;
+  services.nordvpn.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+  networking.firewall.checkReversePath = false;
+  networking.firewall.allowedTCPPorts = [ 443 ];
+  networking.firewall.allowedUDPPorts = [ 1194 ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
