@@ -15,9 +15,6 @@
         polkit_gnome
         wlogout
         wlr-randr
-        xdg-desktop-portal
-        xdg-desktop-portal-wlr
-        xdg-desktop-portal-gtk
         dunst
         playerctl
         brightnessctl
@@ -28,6 +25,8 @@
         numlockx
         flameshot
         betterlockscreen
+        arandr
+        peek
     ];
 
     home.sessionVariables = {

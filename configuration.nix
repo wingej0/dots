@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./system/fonts.nix
       ./system/input-remapper.nix
+      ./system/portals.nix
     ];
 
   # Bootloader.
@@ -128,7 +129,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # System76 Packages
-    # linuxKernel.packages.linux_6_9.system76-power
     system76-firmware
 
     # System Packages
@@ -188,7 +188,7 @@
     zoom
 
     # Python Environment
-    (python312.withPackages (ps: with ps; [
+    (python3.withPackages (ps: with ps; [
       requests
       pip
       numpy
