@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
       ./system/fonts.nix
       ./system/input-remapper.nix
-      ./system/portals.nix
+      # ./system/portals.nix
     ];
 
   # Bootloader.
@@ -171,6 +171,7 @@
     cider
     imagemagick
     libheif # For converting .heic images
+    yt-dlp
 
     # Office
     gnome-text-editor

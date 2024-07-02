@@ -2,7 +2,7 @@
 {
     home.packages = with pkgs; [
 
-        # Qtile programs
+        # Wayland Programs
         xwayland
         rofi-wayland
         grim
@@ -19,7 +19,7 @@
         playerctl
         brightnessctl
 
-        # X11 Stuff
+        # X11 Programs
         picom
         haskellPackages.greenclip
         numlockx
@@ -28,11 +28,4 @@
         arandr
         peek
     ];
-
-    home.sessionVariables = {
-        EDITOR = "vim";
-        GTK_THEME = "Orchis-Green";
-        # Reminds electron apps to run with XWayland
-        NIXOS_OZONE_WL = "1";
-    };
 }

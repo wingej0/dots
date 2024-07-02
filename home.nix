@@ -71,12 +71,6 @@
   # or
   #
   #  /etc/profiles/per-user/wingej0/etc/profile.d/hm-session-vars.sh
-  
-  home.sessionVariables = {
-    EDITOR = "vim";
-    # Reminds electron apps to run with XWayland
-    NIXOS_OZONE_WL = "1";
-  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

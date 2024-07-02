@@ -15,6 +15,7 @@
         gnomeExtensions.alphabetical-app-grid
         gnomeExtensions.tiling-assistant
         gnomeExtensions.user-themes
+        gnomeExtensions.gnordvpn-local
 
         gnome.gnome-boxes
         gnome.gnome-calculator
