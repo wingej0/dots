@@ -12,7 +12,7 @@
 }
 {
     "label" : "logout",
-    "action" : "sleep 1; hyprctl dispatch exit",
+    "action" : "sleep 1; qtile cmd-obj -o cmd -f shutdown",
     "text" : "Exit",
     "keybind" : "e"
 }
