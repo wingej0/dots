@@ -141,6 +141,7 @@
     htop
     acpi
     killall
+    fzf
     pika-backup
     fastfetch
     wallust
@@ -148,6 +149,7 @@
     veracrypt
     bibata-cursors
     remmina
+    xwayland
 
     # Browsers
     vivaldi
@@ -182,7 +184,6 @@
     libreoffice-fresh
     
     # Communication
-    mailspring
     telegram-desktop
     caprine-bin
     discord

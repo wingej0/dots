@@ -198,7 +198,7 @@ keys.extend([
         desc="Save current wallpaper to favorites"),
     Key([mod], "x", lazy.spawn("killall variety"),
         desc="Kill Variety"),
-    Key([mod], "z", lazy.spawn("variety --set /home/wingej0/Pictures/wingets.png"),
+    Key([mod], "z", lazy.spawn("variety --set /home/wingej0/Pictures/wingets.JPG"),
         desc="Set wallpaper to family. :)"),
 
     # Media Keys

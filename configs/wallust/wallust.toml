@@ -68,7 +68,7 @@ palette = "dark"
 # Ensures a "readable contrast" (OPTIONAL, disabled by default)
 # Should only be enabled when you notice an unreadable contrast frequently happening
 # with your images. The reference color for the contrast is the background color.
-#check_contrast = true
+check_contrast = true
 
 # Color saturation, between [1% and 100%] (OPTIONAL, disabled by default)
 # usually something higher than 50 increases the saturation and below
@@ -85,6 +85,7 @@ palette = "dark"
 #zathura = { template = 'zathura', target = '~/.config/zathura/zathurarc' }
 qtile = { template = 'templates/colors-qtile.json', target = '~/.cache/qtile/colors.json' } 
 rofi = { template = 'templates/colors-rofi-pywal.rasi', target = '~/.cache/rofi/colors-rofi-pywal.rasi' }
+wlogout = { template = 'templates/colors-wlogout.css', target = '~/.cache/wlogout/colors-wlogout.css' }
 
 # OPTIONALLY It can accept `new_engine = true`: This "new engine" difers by using  double brackets like `{{variable}}`
 # instead of one like usual, which helps with file formats that use brackets like json. With the `new_engine` enabled

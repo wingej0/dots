@@ -3,7 +3,6 @@
     home.packages = with pkgs; [
 
         # Wayland Programs
-        xwayland
         rofi-wayland
         grim
         slurp
