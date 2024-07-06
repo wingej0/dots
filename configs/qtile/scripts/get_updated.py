@@ -4,7 +4,7 @@ from datetime import datetime
 
 
 def get_last_updated():
-    lock_file = f"{os.path.expanduser('~')}/.dotfiles/flake.nix"
+    lock_file = f"{os.path.expanduser('~')}/.dotfiles/flake.lock"
     updated = datetime.fromtimestamp(os.path.getmtime(lock_file))
     today = datetime.now()
     last_updated = (today - updated).days
