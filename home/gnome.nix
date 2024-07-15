@@ -6,7 +6,7 @@
         tela-icon-theme
 
         # Gnome extensions
-        gnome.gnome-tweaks
+        pkgs.gnome-tweaks
         gnomeExtensions.dash-to-dock
         gnomeExtensions.blur-my-shell
         gnomeExtensions.appindicator
@@ -18,6 +18,6 @@
         gnomeExtensions.gnordvpn-local
 
         gnome.gnome-boxes
-        gnome.gnome-calculator
+        pkgs.gnome-calculator
     ];
 }

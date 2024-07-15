@@ -182,8 +182,8 @@
     jetbrains.pycharm-community
     mongodb-compass
     insomnia
-    mongodb
-    mongosh
+    # mongodb
+    # mongosh
 
     # Media
     obs-studio
