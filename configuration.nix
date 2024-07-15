@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
       ./system/fonts.nix
       ./system/input-remapper.nix
-      # ./system/portals.nix
+      ./system/portals.nix
     ];
 
   # Bootloader.
@@ -77,6 +77,12 @@
   security.pam.services.swaylock = {};
   services.gnome.gnome-keyring.enable = true;
 
+  environment.sessionVariables = {
+    EDITOR = "vim";
+    GTK_THEME = "Orchis-Green";
+    NIXOS_OZONE_WL = "1";
+  };
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -101,6 +107,20 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
+
+  # hardware = {
+  #   graphics.enable = true;
+  #   graphics.enable32Bit = true;
+
+  #   graphics.extraPackages = with pkgs; [
+  #       intel-media-driver
+  #       vaapiVdpau
+  #       libvdpau-va-gl
+  #       vpl-gpu-rt
+  #     ];
+  #   bluetooth.enable = true;
+
+  # };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -150,6 +170,7 @@
     bibata-cursors
     remmina
     xwayland
+    libGL
 
     # Browsers
     vivaldi
@@ -187,7 +208,8 @@
     telegram-desktop
     caprine-bin
     discord
-    zoom
+    zoom-us
+    mailspring
 
     # Python Environment
     (python3.withPackages (ps: with ps; [
