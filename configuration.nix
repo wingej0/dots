@@ -61,26 +61,74 @@
   services.xserver.enable = true;
   programs.xwayland.enable = true;
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  specialisation = {
+    gnome-desktop.configuration = {
+      # Enable the GNOME Desktop Environment.
+      services.xserver.displayManager.gdm.enable = true;
+      services.xserver.desktopManager.gnome.enable = true;
 
-  # Enable Qtile
-  services.xserver.windowManager.qtile = {
-    enable = true;
-    extraPackages = python3Packages: with python3Packages; [
-      qtile-extras
-    ];
-  };
+      environment.sessionVariables = {
+        EDITOR = "vim";
+        GTK_THEME = "Orchis";
+      };
+    };
 
-  # Enable pam for swaylock, so it will actually unlock
-  security.pam.services.swaylock = {};
-  services.gnome.gnome-keyring.enable = true;
+    plasma-desktop.configuration = {
+      # Enable the PLASMA Desktop Environment.
+      services.xserver.displayManager.sddm.enable = true;
+      services.xserver.desktopManager.plasma6.enable = true;
+    };
 
-  environment.sessionVariables = {
-    EDITOR = "vim";
-    GTK_THEME = "Orchis-Green";
-    NIXOS_OZONE_WL = "1";
+    qtile-desktop.configuration = {
+      services.xserver.displayManager.lightdm.enable = true;
+
+      # Enable Qtile
+      services.xserver.windowManager.qtile = {
+        enable = true;
+        extraPackages = python3Packages: with python3Packages; [
+          qtile-extras
+        ];
+      };
+
+      environment.systemPackages = with pkgs; [
+        xfce.thunar
+
+        # Wayland Programs
+        rofi-wayland
+        grim
+        slurp
+        swappy
+        wl-clipboard
+        cliphist
+        swayidle
+        swaylock-effects
+        polkit_gnome
+        wlogout
+        wlr-randr
+        dunst
+        playerctl
+        brightnessctl
+
+        # X11 Programs
+        picom
+        haskellPackages.greenclip
+        numlockx
+        flameshot
+        betterlockscreen
+        arandr
+        peek
+      ];
+
+      # Enable pam for swaylock, so it will actually unlock
+      security.pam.services.swaylock = {};
+      services.gnome.gnome-keyring.enable = true;
+
+      environment.sessionVariables = {
+        EDITOR = "vim";
+        GTK_THEME = "Orchis";
+        NIXOS_OZONE_WL = "1";
+      };
+    };
   };
 
   # Configure keymap in X11
@@ -107,20 +155,6 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
-
-  # hardware = {
-  #   graphics.enable = true;
-  #   graphics.enable32Bit = true;
-
-  #   graphics.extraPackages = with pkgs; [
-  #       intel-media-driver
-  #       vaapiVdpau
-  #       libvdpau-va-gl
-  #       vpl-gpu-rt
-  #     ];
-  #   bluetooth.enable = true;
-
-  # };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -169,8 +203,8 @@
     veracrypt
     bibata-cursors
     remmina
-    xwayland
-    libGL
+    popsicle
+    # xwayland
 
     # Browsers
     vivaldi
@@ -220,6 +254,7 @@
       jupyterlab
       pymongo
       matplotlib
+      matplotlib-venn
     ]))
 
     # Games

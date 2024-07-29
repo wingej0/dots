@@ -4,12 +4,12 @@
         enable = true;
 
         iconTheme = {
-            name = "Tela-green-dark";
+            name = "Tela-dark";
             package = pkgs.tela-icon-theme;
         };
 
         theme = {
-            name = "Orchis-Green";
+            name = "Orchis";
             package = pkgs.orchis-theme;
         };
 
